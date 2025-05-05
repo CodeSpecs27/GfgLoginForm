@@ -1,0 +1,139 @@
+body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+h1 {
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+h2 {
+
+    font-size: 22px;
+    padding: 20px 5px;
+}
+
+label {
+
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+
+    margin: 10px 0px;
+
+    padding: 10px 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    width: 94%;
+
+}
+
+a {
+
+
+
+    text-decoration: none;
+
+}
+
+#mainContainer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #faf9f6;
+
+    border: 1px solid #ccc;
+
+    width: 80%;
+
+    margin: 35px 5px;
+
+    border-radius: 10px;
+
+}
+
+#loginContainer {
+
+    width: 50%;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    background: white;
+
+    padding: 30px 10px;
+
+    margin: 5%;
+
+}
+
+#logo {
+
+    color: #3dbe29;
+
+    font-size: 20px;
+
+}
+
+#button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    background: #3dbe29;
+
+    color: white;
+
+    margin: 15px 0px;
+
+    font-weight: bold;
+
+}
+
+#regLink {
+
+    margin-top: 20px;
+}
+
+#userNameStatus, #passwordStatus {
+
+    display: block;
+    margin: 15px 5px;
+    font-style: Italic;
+    font-size: 15px;
+}
+
+.fields {
+
+    display: block;
+    Justify-content: left;
+    width: 100%;
+    text-align: left;
+    padding: 0px 1px 5px;
+    margin: 0px 5px 15px;
+}
