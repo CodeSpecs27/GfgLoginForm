@@ -6,24 +6,30 @@ body {
 
 h1 {
     margin: 0px;
-    padding: 0px;
+    color: #3dbe29;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1.3rem;
     padding: 20px 5px;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin: 5px;
 }
+
 input[type="text"],
 input[type="password"] {
     margin: 10px 0px;
     padding: 10px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 94%;
+    width: -webkit-fill-available;
 }
 
 a {
@@ -51,12 +57,11 @@ a {
     margin: 5%;
 }
 
-#logo {
-    color: #3dbe29;
-    font-size: 20px;
+#button:hover{
+    background-color: #36a125;
 }
 
-#button {
+#button, #register {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -67,11 +72,20 @@ a {
     font-weight: bold;
 }
 
-#regLink {
-    margin-top: 20px;
+#logoRegister{
+    color: black;
 }
 
-#userNameStatus, #passwordStatus {
+#regLink {
+    margin: 10px 5px 20px;
+}
+
+#userNameStatus,
+#passwordStatus, 
+#userNameStatus1,
+#passwordStatus1,
+#emailStatus,
+#phoneStatus {
     display: block;
     margin: 15px 5px;
     font-style: Italic;
@@ -85,4 +99,16 @@ a {
     text-align: left;
     padding: 0px 1px 5px;
     margin: 0px 5px 15px;
+}
+
+.weak, .invalid{
+    color: red;
+}
+
+.medium{
+    color: orange;
+}
+
+.strong, .valid{
+    color: green;
 }

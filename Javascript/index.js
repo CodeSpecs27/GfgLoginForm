@@ -7,6 +7,8 @@ function validateUserName(username,usernameStatus) {
     const userNameStatus = document.getElementById(usernameStatus);
     const nameRegex = /^[A-Za-z\s]+$/;
 
+    userNameStatus.className = "invalid";
+
     if (userName === "") {
 
         userNameStatus.textContent = "Note: Fill UserName!";
@@ -18,7 +20,8 @@ function validateUserName(username,usernameStatus) {
         return;
     }
 
-    userNameStatus.textContent = "Note: Valid Username";
+    userNameStatus.className = "valid";
+    userNameStatus.textContent = "Note: Valid Username!";
 
 }
 
@@ -33,16 +36,20 @@ function validatePassword(passwordF,passwordstatus) {
     const passwordStatus = document.getElementById(passwordstatus);
 
     let strength = "Weak";
+    let className = "weak";
 
     if (password.length >= 6 && /[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*]/.test(password)) {
         strength = "Strong";
+        className = "strong"
 
     } else if (password.length >= 4 && /[A-Z]/.test(password) && /[0-9]/.test(password)) {
         strength = "Medium";
+        className = "medium";
 
     }
 
-    passwordStatus.textContent ="Note: " +strength + " Password";
+    passwordStatus.className = className;
+    passwordStatus.textContent ="Note: " +strength + " Password!";
 
 };
 
@@ -55,8 +62,11 @@ function validateEmail(emailF,emailstatus) {
     const emailStatus = document.getElementById(emailstatus);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
+    emailStatus.className = "invalid";
+
     if (email === "") {
-        emailStatus.textContent = "Note: Fill Email";
+        emailStatus.textContent = "Note: Fill Email!";
         return;
     }
 
@@ -65,7 +75,8 @@ function validateEmail(emailF,emailstatus) {
         return;
     }
 
-    emailStatus.textContent = "Note: Valid Email";
+    emailStatus.className = "valid";
+    emailStatus.textContent = "Note: Valid Email!";
 
 }
 
@@ -77,20 +88,23 @@ function validatePhone(phoneF,phonestatus) {
     const phone = document.getElementById(phoneF).value.trim();
     const phoneStatus = document.getElementById(phonestatus);   
     const phoneRegex = /^\d{10}$/;
+
+    phoneStatus.className = "invalid";
     if (phone === "") {
-        phoneStatus.textContent = "Note: Fill Phone Number";
+        phoneStatus.textContent = "Note: Fill Phone Number!";
         return;
     }
     if (!phoneRegex.test(phone)) {
         phoneStatus.textContent = "Note: Invalid Phone Number Format!";
         return;
     }
-    phoneStatus.textContent = "Note: Valid Phone Number";
+
+    phoneStatus.className = "valid";
+    phoneStatus.textContent = "Note: Valid Phone Number!";
 }
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript file loaded successfully!");
 
     // Validate username - Login Page
     const validateOnSubmit = document.getElementById("button");
@@ -109,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
             validateEmail("email", "emailStatus");
             validatePhone("phone", "phoneStatus");
 
-            alert("Sign Up Successful!");
+            alert("Sign Up Successfull!");
         });
     }
 
